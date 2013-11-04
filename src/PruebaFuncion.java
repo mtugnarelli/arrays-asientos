@@ -131,11 +131,32 @@ public class PruebaFuncion {
 		funcion.reservarAsiento(1, 1);
 		funcion.reservarAsiento(5, 3);
 		funcion.reservarAsiento(8, 4);
+		funcion.venderAsiento(1, 2);
+		funcion.venderAsiento(2, 4);
 		
 		/* operación */
 		int libres = funcion.contarAsientos(Disponibilidad.LIBRE);
 		
 		/* comprobación */
-		Assert.assertEquals("asientos libres", 47, libres);
+		Assert.assertEquals("asientos libres", 45, libres);
 	}
+	
+	@Test
+	public void contarAsientosReservados() {
+		
+		/* condición inicial */
+		Funcion funcion = new Funcion(10, 5, 100.0);
+		funcion.reservarAsiento(1, 1);
+		funcion.reservarAsiento(5, 3);
+		funcion.reservarAsiento(8, 4);
+		funcion.venderAsiento(1, 2);
+		funcion.venderAsiento(2, 4);
+		
+		/* operación */
+		int reservados = funcion.contarAsientos(Disponibilidad.RESERVADO);
+		
+		/* comprobación */
+		Assert.assertEquals("asientos reservados", 3, reservados);
+	}
+	
 }
