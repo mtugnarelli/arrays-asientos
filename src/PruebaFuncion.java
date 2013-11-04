@@ -34,7 +34,7 @@ public class PruebaFuncion {
 	}
 	
 	@Test
-	public void cambiarPrecioPorAsiento() {
+	public void cambiarPrecioDelAsiento() {
 		
 		/* condición inicial */
 		Funcion funcion = new Funcion(10, 5, 50.0);
@@ -45,5 +45,35 @@ public class PruebaFuncion {
 		
 		/* comprobación */
 		Assert.assertEquals("precio del asiento", 120.0, precio, 0.01);
+	}
+	
+	@Test(expected  = Error.class)
+	public void cambiarPrecioDelAsientoConFilaIncorrecta() {
+		
+		/* condicion inicial */
+		Funcion funcion = new Funcion(10, 5, 120.0);
+		
+		/* operación */
+		funcion.cambiarPrecioDelAsiento(11, 3, 100.0);
+	}
+	
+	@Test(expected = Error.class)
+	public void cambiarPrecioDelAsientoConNumeroIncorrecto() {
+		
+		/* condicion inicial */
+		Funcion funcion = new Funcion(5, 6, 100.0);
+		
+		/* operación */
+		funcion.cambiarPrecioDelAsiento(3, 7, 80.0);
+	}
+	
+	@Test(expected = Error.class)
+	public void cambiarPrecioDelAsientoConPrecioNegativo() {
+		
+		/* condicion inicial */
+		Funcion funcion = new Funcion(10, 5, 80.0);
+		
+		/* operación */
+		funcion.cambiarPrecioDelAsiento(1, 1, -60);
 	}
 }

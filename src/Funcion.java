@@ -47,14 +47,45 @@ public class Funcion {
 		return this.asientos[0].length;
 	}
 
+	/**
+	 * pre : fila está en el rango [1,contarFilasDeAsientos],
+	 * 		 numeroAsiento está en el rango [1,contarAsientosPorFila],
+	 * 		 precio es mayor o igual a 0.
+	 * post: cambia el precio del Asiento indicado.
+	 */
 	public void cambiarPrecioDelAsiento(int fila, int numeroAsiento, double precio) {
 
-//		this.asientos[fila - 1][numeroAsiento - 1].cambiarPrecio(precio);
+		Asiento asiento = this.obtenerAsiento(fila, numeroAsiento);
+		
+		asiento.cambiarPrecio(precio);
 	}
 
+	/**
+	 * pre : fila está en el rango [1,contarFilasDeAsientos],
+	 * 		 numeroAsiento está en el rango [1,contarAsientosPorFila],
+	 * 		 precio es mayor o igual a 0.
+	 * post: devuelve el precio del Asiento indicado.
+	 */
 	public double obtenerPrecioDelAsiento(int fila, int numeroAsiento) {
 
-		return this.asientos[fila - 1][numeroAsiento - 1].obtenerPrecio();
+		Asiento asiento = this.obtenerAsiento(fila, numeroAsiento);
+		
+		return asiento.obtenerPrecio();
 	}
-
+	
+	/**
+	 * pre : fila está en el rango [1,contarFilasDeAsientos],
+	 * 		 numeroAsiento está en el rango [1,contarAsientosPorFila].
+	 * post: devuelve el Asiento identificado por fila-numeroAsiento.
+	 */
+	private Asiento obtenerAsiento(int fila, int numeroAsiento) {
+		
+		if ((fila < 1) || (fila > this.asientos.length) ||
+			(numeroAsiento < 1) || (numeroAsiento > this.asientos[fila].length)) {
+			
+			throw new Error("El Asiento " + fila + "-" + numeroAsiento + " no existe");
+		}
+		
+		return this.asientos[fila - 1][numeroAsiento - 1];
+	}
 }
