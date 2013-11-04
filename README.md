@@ -33,6 +33,9 @@ La `Funcion` debe proveer operaciones para:
 
 ### Implementaciones incrementales
 
+1. Implementación del constructor de `Funcion`. 
+	* [`Funcion`](../punto1/src/Funcion.java)
+	* [`PruebaFuncion`](../punto1/src/PruebaFuncion.java)
 
 ### Versión final
 
