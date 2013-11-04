@@ -91,4 +91,19 @@ public class PruebaFuncion {
 		Assert.assertEquals("disponibilidad del asiento",
 							Disponibilidad.RESERVADO, disponibilidadDelAsiento);
 	}
+	
+	@Test
+	public void venderAsiento() {
+		
+		/* condición inicial */
+		Funcion funcion = new Funcion(5, 6, 80.0);
+		
+		/* operación */
+		funcion.venderAsiento(3, 4);
+		Disponibilidad disponibilidadDelAsiento = funcion.obtenerDisponibilidadDelAsiento(3, 4);
+		
+		/* comprobación */
+		Assert.assertEquals("disponibilidad del asiento",
+							Disponibilidad.VENDIDO, disponibilidadDelAsiento);
+	}
 }

@@ -92,7 +92,7 @@ public class Funcion {
 	/**
 	 * pre : fila está en el rango [1,contarFilasDeAsientos],
 	 * 		 numeroAsiento está en el rango [1,contarAsientosPorFila],
-	 * 		 el Asiento no está reservado.
+	 * 		 el Asiento no está RESERVADO.
 	 * post: el Asiento indicado queda reservado.
 	 */
 	public void reservarAsiento(int fila, int numeroAsiento) {
@@ -109,5 +109,18 @@ public class Funcion {
 
 		return this.obtenerAsiento(fila, numeroAsiento).obtenerDisponibilidad();
 	}
+
+	/**
+	 * pre : fila está en el rango [1,contarFilasDeAsientos],
+	 * 		 numeroAsiento está en el rango [1,contarAsientosPorFila],
+	 * 		 el Asiento no está VENDIDO.
+	 * post: el Asiento indicado queda vendido.
+	 */
+	public void venderAsiento(int fila, int numeroAsiento) {
+		
+		this.obtenerAsiento(fila, numeroAsiento).vender();
+	}
+	
+	
 	
 }

@@ -45,6 +45,11 @@ La `Funcion` debe proveer operaciones para:
 3. Métodos `reservarAsiento` y `obtenerDisponibilidadDelAsiento` implementados.
 	* [`Funcion`](../punto3/src/Funcion.java#L92)
 	* [`PruebaFuncion`](../punto3/src/PruebaFuncion.java#L80)
+	
+4. Método `venderAsiento` implementado.
+	* [`Funcion`](../punto4/src/Funcion.java#L113)
+	* [`PruebaFuncion`](../punto4/src/PruebaFuncion.java#L95)
+
 
 ### Versión final
 
