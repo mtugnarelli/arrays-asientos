@@ -154,4 +154,24 @@ public class Funcion {
 		
 		return total;
 	}
+
+	/**
+	 * post: devuelve la suma de los precios de todos los Asientos VENDIDOS.
+	 */
+	public double sumarizarRecaudacion() {
+		
+		double recaudacion = 0.0;
+		
+		for (int i = 0; i < this.asientos.length; i++) {
+			
+			for (int j = 0; j < this.asientos[i].length; j++) {
+
+				Asiento asiento = this.asientos[i][j];
+				if (asiento.obtenerDisponibilidad() == Disponibilidad.VENDIDO) {
+					recaudacion += asiento.obtenerPrecio();
+				}
+			}
+		}
+		return recaudacion;
+	}
 }

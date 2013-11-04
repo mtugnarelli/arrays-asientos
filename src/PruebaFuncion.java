@@ -177,4 +177,27 @@ public class PruebaFuncion {
 		/* comprobación */
 		Assert.assertEquals("asientos vendidos", 4, vendidos);
 	}
+	
+	@Test
+	public void sumarizarRecaudacion() {
+		
+		/* condición inicial */
+		Funcion funcion = new Funcion(10, 5, 100.0);
+		funcion.reservarAsiento(1, 1);
+		funcion.reservarAsiento(8, 4);
+		funcion.cambiarPrecioDelAsiento(1, 2, 50.0);
+		funcion.venderAsiento(1, 2);
+		funcion.venderAsiento(3, 3);
+		funcion.venderAsiento(3, 4);
+		funcion.venderAsiento(3, 5);
+		funcion.venderAsiento(5, 3);
+		funcion.venderAsiento(5, 4);
+		funcion.venderAsiento(5, 5);
+		
+		/* operación */
+		double recaudacion = funcion.sumarizarRecaudacion();
+		
+		/* comprobación */
+		Assert.assertEquals("recaudacion", 650.0, recaudacion, 0.01);
+	}
 }

@@ -59,10 +59,14 @@ La `Funcion` debe proveer operaciones para:
 	* [`PruebaFuncion`](../punto6/src/PruebaFuncion.java#L126)
 
 7. Prueba agregada para el método `contarAsientos`.
-	* [`PruebaFuncion`](../punto6/src/PruebaFuncion.java#L144)
+	* [`PruebaFuncion`](../punto7/src/PruebaFuncion.java#L144)
 
 8. Prueba agregada para el método `contarAsientos`.
-	* [`PruebaFuncion`](../punto6/src/PruebaFuncion.java#L162)
+	* [`PruebaFuncion`](../punto8/src/PruebaFuncion.java#L162)
+	
+9. Método `sumarizarRecaudacion` implementado.
+	* [`Funcion`](../punto9/src/Funcion.java#L158)
+	* [`PruebaFuncion`](../punto9/src/PruebaFuncion.java#L181)
 
 ### Versión final
 
