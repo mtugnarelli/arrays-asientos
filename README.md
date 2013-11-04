@@ -61,6 +61,8 @@ La `Funcion` debe proveer operaciones para:
 7. Prueba agregada para el método `contarAsientos`.
 	* [`PruebaFuncion`](../punto6/src/PruebaFuncion.java#L144)
 
+8. Prueba agregada para el método `contarAsientos`.
+	* [`PruebaFuncion`](../punto6/src/PruebaFuncion.java#L162)
 
 ### Versión final
 

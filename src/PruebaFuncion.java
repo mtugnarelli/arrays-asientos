@@ -159,4 +159,22 @@ public class PruebaFuncion {
 		Assert.assertEquals("asientos reservados", 3, reservados);
 	}
 	
+	@Test
+	public void contarAsientosVendidos() {
+		
+		/* condición inicial */
+		Funcion funcion = new Funcion(10, 5, 100.0);
+		funcion.reservarAsiento(1, 1);
+		funcion.reservarAsiento(8, 4);
+		funcion.venderAsiento(1, 2);
+		funcion.venderAsiento(2, 3);
+		funcion.venderAsiento(2, 4);
+		funcion.venderAsiento(2, 5);
+		
+		/* operación */
+		int vendidos = funcion.contarAsientos(Disponibilidad.VENDIDO);
+		
+		/* comprobación */
+		Assert.assertEquals("asientos vendidos", 4, vendidos);
+	}
 }
