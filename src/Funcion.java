@@ -131,4 +131,27 @@ public class Funcion {
 	
 		this.obtenerAsiento(fila, numeroAsiento).cancelarReserva();
 	}
+
+	/**
+	 * post: devuelve la cantidad de Asiento con Disponibilidad igual a disponibilidadBuscada.
+	 */
+	public int contarAsientos(Disponibilidad disponibilidadBuscada) {
+
+		int total = 0;
+		
+		for (int i = 0; i < this.asientos.length; i++) {
+			
+			for (int j = 0; j < this.asientos[i].length; j++) {
+				
+				Asiento asiento = this.asientos[i][j];
+				
+				if (asiento.obtenerDisponibilidad() == disponibilidadBuscada) {
+					
+					total++;
+				}
+			}
+		}
+		
+		return total;
+	}
 }

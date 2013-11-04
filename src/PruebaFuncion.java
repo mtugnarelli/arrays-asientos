@@ -122,4 +122,20 @@ public class PruebaFuncion {
 		Assert.assertEquals("disponibilidad del asiento",
 							Disponibilidad.LIBRE, disponibilidadDelAsiento);
 	}
+	
+	@Test
+	public void contarAsientosLibres() {
+		
+		/* condición inicial */
+		Funcion funcion = new Funcion(10, 5, 100.0);
+		funcion.reservarAsiento(1, 1);
+		funcion.reservarAsiento(5, 3);
+		funcion.reservarAsiento(8, 4);
+		
+		/* operación */
+		int libres = funcion.contarAsientos(Disponibilidad.LIBRE);
+		
+		/* comprobación */
+		Assert.assertEquals("asientos libres", 47, libres);
+	}
 }
