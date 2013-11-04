@@ -34,12 +34,13 @@ La `Funcion` debe proveer operaciones para:
 ### Implementaciones incrementales
 
 1. Constructor de `Funcion`
-	* [`Funcion`](../punto1/src/Funcion.java)
-	* [`PruebaFuncion`](../punto1/src/PruebaFuncion.java)
+	* [`Funcion`](../punto1/src/Funcion.java#L1)
+	* [`PruebaFuncion`](../punto1/src/PruebaFuncion.java#L1)
 	
-2. Métodos `cambiarPrecioDelAsiento` y `obtenerPrecioDelAsiento` 
-	* [`Funcion`](../punto2/src/Funcion.java)
-	* [`PruebaFuncion`](../punto2/src/PruebaFuncion.java)
+2. Métodos `cambiarPrecioDelAsiento` y `obtenerPrecioDelAsiento` implementados. Agregado el método privado
+`obtenerAsiento` para validar la posición del `Asiento` indicado. 
+	* [`Funcion`](../punto2/src/Funcion.java#L50)
+	* [`PruebaFuncion`](../punto2/src/PruebaFuncion.java$L36)
 
 ### Versión final
 
