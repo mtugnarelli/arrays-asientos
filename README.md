@@ -49,6 +49,10 @@ La `Funcion` debe proveer operaciones para:
 4. Método `venderAsiento` implementado.
 	* [`Funcion`](../punto4/src/Funcion.java#L113)
 	* [`PruebaFuncion`](../punto4/src/PruebaFuncion.java#L95)
+	
+5. Método `cancelarReservaAsiento` implementado.
+	* [`Funcion`](../punto5/src/Funcion.java#L124)
+	* [`PruebaFuncion`](../punto5/src/PruebaFuncion.java#L110)
 
 
 ### Versión final

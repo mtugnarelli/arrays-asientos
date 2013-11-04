@@ -106,4 +106,20 @@ public class PruebaFuncion {
 		Assert.assertEquals("disponibilidad del asiento",
 							Disponibilidad.VENDIDO, disponibilidadDelAsiento);
 	}
+	
+	@Test
+	public void cancelarReservaAsiento() {
+		
+		/* condición inicial */
+		Funcion funcion = new Funcion(10, 5, 90.0);
+		funcion.reservarAsiento(2, 1);
+		
+		/* operación */
+		funcion.cancelarReservaAsiento(2, 1);
+		Disponibilidad disponibilidadDelAsiento = funcion.obtenerDisponibilidadDelAsiento(2, 1);
+		
+		/* comprobación */
+		Assert.assertEquals("disponibilidad del asiento",
+							Disponibilidad.LIBRE, disponibilidadDelAsiento);
+	}
 }
