@@ -47,4 +47,14 @@ public class Funcion {
 		return this.asientos[0].length;
 	}
 
+	public void cambiarPrecioDelAsiento(int fila, int numeroAsiento, double precio) {
+
+//		this.asientos[fila - 1][numeroAsiento - 1].cambiarPrecio(precio);
+	}
+
+	public double obtenerPrecioDelAsiento(int fila, int numeroAsiento) {
+
+		return this.asientos[fila - 1][numeroAsiento - 1].obtenerPrecio();
+	}
+
 }

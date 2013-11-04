@@ -32,4 +32,18 @@ public class PruebaFuncion {
 		
 		new Funcion(10, 15, -80.0);
 	}
+	
+	@Test
+	public void cambiarPrecioPorAsiento() {
+		
+		/* condición inicial */
+		Funcion funcion = new Funcion(10, 5, 50.0);
+		
+		/* operación */
+		funcion.cambiarPrecioDelAsiento(1, 3, 120.0);
+		double precio = funcion.obtenerPrecioDelAsiento(1, 3);
+		
+		/* comprobación */
+		Assert.assertEquals("precio del asiento", 120.0, precio, 0.01);
+	}
 }
