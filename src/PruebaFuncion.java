@@ -76,4 +76,19 @@ public class PruebaFuncion {
 		/* operación */
 		funcion.cambiarPrecioDelAsiento(1, 1, -60);
 	}
+	
+	@Test
+	public void reservarAsiento() {
+		
+		/* condición inicial */
+		Funcion funcion = new Funcion(10, 8, 100.0);
+		
+		/* operación */
+		funcion.reservarAsiento(1, 5);
+		Disponibilidad disponibilidadDelAsiento = funcion.obtenerDisponibilidadDelAsiento(1, 5);
+		
+		/* comprobación */
+		Assert.assertEquals("disponibilidad del asiento",
+							Disponibilidad.RESERVADO, disponibilidadDelAsiento);
+	}
 }
